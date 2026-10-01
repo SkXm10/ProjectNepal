@@ -1,0 +1,105 @@
+/* ==========================================================================
+   1. Special Culture Page Hero Banner
+   ========================================================================== */
+.culture-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)),
+        url('https://www.challengesabroad.com.au/media/1800/screen-shot-2020-09-01-at-24645-pm.png') no-repeat center center/cover;
+    height: 55vh;
+    /* Unified height matching your trekking page layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    padding: 0 20px;
+    margin-bottom: 60px;
+}
+
+.culture-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.5px;
+}
+
+.culture-hero p {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   2. Centered 2x2 Grid Architecture (Locks card stretching across large screens)
+   ========================================================================== */
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Forms 2 places on top row, 2 on bottom */
+    gap: 40px;
+    margin-bottom: 60px;
+
+    /* Centering Layout Limits */
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+}
+
+.destination-card {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 25px;
+}
+
+.card-body h3 {
+    color: #1a365d;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.card-body p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   3. Custom Spiritual Tag Color Adjustments
+   ========================================================================== */
+.tag {
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: #fffaf0;
+    /* Warm cream tint matching the main theme */
+    color: #dd6b20;
+    /* Deep orange cultural tone */
+}
+
+/* ==========================================================================
+   4. Action Return Link Box Layout
+   ========================================================================== */
+.back-btn-container {
+    text-align: center;
+    margin: 20px 0 80px 0;
+}
