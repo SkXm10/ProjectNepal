@@ -1,11 +1,8 @@
-/* ==========================================================================
-   1. Special Trekking Page Hero Banner
-   ========================================================================== */
+/* ===== Trekking page hero ===== */
 .trek-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
         url('https://images.unsplash.com/photo-1691235834967-056124691651?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
     height: 55vh;
-    /* Shorter than main page hero, optimized for content subpages */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,93 +25,84 @@
     font-weight: 300;
 }
 
+/* ===== Card grid ===== */
+.trek-main {
+    padding: 0 5%;
+}
 
 .trek-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
-    margin-bottom: 60px;
     max-width: 900px;
     margin: 0 auto 60px auto;
 }
 
-.destination-card {
-    background: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.destination-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.destination-card img {
-    width: 100%;
+/* Overrides for the shared card styles in project.css */
+.trek-grid .destination-card img {
     height: 350px;
-    object-fit: cover;
 }
 
-.card-body {
-    padding: 25px;
-}
-
-.card-body h3 {
-    color: #1a365d;
+.trek-grid .card-body h3 {
     font-size: 1.4rem;
     margin-bottom: 12px;
 }
 
-.card-body p {
-    color: #4a5568;
-    font-size: 0.95rem;
+.trek-grid .card-body p {
     line-height: 1.6;
+    margin-bottom: 0;
 }
 
-/* ==========================================================================
-   3. Dynamic Difficulty Badge Tag Color Adjustments
-   ========================================================================== */
-.tag {
+/* ===== Difficulty tags ===== */
+.trek-grid .tag {
     padding: 5px 12px;
-    border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 700;
-    display: inline-block;
     margin-bottom: 12px;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-/* Difficult Badge: Soft Crimson theme */
-.destination-card:nth-of-type(1) .tag {
+/* Advanced: red */
+.tag-hard {
     background-color: #fff5f5;
     color: #e53e3e;
 }
 
-/* Moderate to Hard Badge: Soft Orange theme */
-.destination-card:nth-of-type(2) .tag {
+/* Intermediate to advanced: orange */
+.tag-mid-hard {
     background-color: #fffaf0;
     color: #dd6b20;
 }
 
-/* Moderate Badge: Soft Purple theme */
-.destination-card:nth-of-type(3) .tag {
+/* Intermediate: purple */
+.tag-mid {
     background-color: #faf5ff;
     color: #805ad5;
 }
 
-/* Easy to Moderate Badge: Soft Green theme */
-.destination-card:nth-of-type(4) .tag {
+/* Beginner to intermediate: green */
+.tag-easy {
     background-color: #f0fff4;
     color: #38a169;
 }
 
-/* ==========================================================================
-   4. Action Return Link Button Layout
-   ========================================================================== */
+/* ===== Back button ===== */
 .back-btn-container {
     text-align: center;
     margin: 20px 0 80px 0;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .trek-hero h1 {
+        font-size: 2rem;
+    }
+
+    .trek-hero p {
+        font-size: 1.05rem;
+    }
+
+    .trek-grid .destination-card img {
+        height: 240px;
+    }
 }
