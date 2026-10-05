@@ -1,11 +1,8 @@
-/* ==========================================================================
-   1. Special Culture Page Hero Banner
-   ========================================================================== */
+/* ===== Culture page hero ===== */
 .culture-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)),
         url('https://highlandexpeditions.com/wp-content/uploads/2024/08/ihipuja-tk-culture.jpeg.webp') no-repeat center center/cover;
     height: 55vh;
-    /* Unified height matching your trekking page layout */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,78 +25,63 @@
     font-weight: 300;
 }
 
-/* ==========================================================================
-   2. Centered 2x2 Grid Architecture (Locks card stretching across large screens)
-   ========================================================================== */
+/* ===== 2x2 grid ===== */
+.culture-main {
+    padding: 0 5%;
+}
+
 .culture-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* Forms 2 places on top row, 2 on bottom */
     gap: 40px;
-    margin-bottom: 60px;
-
-    /* Centering Layout Limits */
     max-width: 900px;
     margin: 0 auto 60px auto;
 }
 
-.destination-card {
-    background: #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.destination-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.destination-card img {
-    width: 100%;
+/* Overrides for the shared card styles in project.css */
+.culture-grid .destination-card img {
     height: 240px;
-    object-fit: cover;
 }
 
-.card-body {
-    padding: 25px;
-}
-
-.card-body h3 {
-    color: #1a365d;
+.culture-grid .card-body h3 {
     font-size: 1.4rem;
     margin-bottom: 12px;
 }
 
-.card-body p {
-    color: #4a5568;
-    font-size: 0.95rem;
+.culture-grid .card-body p {
     line-height: 1.6;
+    margin-bottom: 0;
 }
 
-/* ==========================================================================
-   3. Custom Spiritual Tag Color Adjustments
-   ========================================================================== */
-.tag {
+/* ===== Tags (warm orange theme) ===== */
+.culture-grid .tag {
     padding: 5px 12px;
-    border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 700;
-    display: inline-block;
     margin-bottom: 12px;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
     background-color: #fffaf0;
-    /* Warm cream tint matching the main theme */
     color: #dd6b20;
-    /* Deep orange cultural tone */
 }
 
-/* ==========================================================================
-   4. Action Return Link Box Layout
-   ========================================================================== */
+/* ===== Back button ===== */
 .back-btn-container {
     text-align: center;
     margin: 20px 0 80px 0;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 768px) {
+    .culture-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .culture-hero p {
+        font-size: 1.1rem;
+    }
+
+    .culture-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
